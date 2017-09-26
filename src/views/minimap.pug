@@ -1,0 +1,9 @@
+html
+	head
+		link(rel='stylesheet', href='/minimap.css')
+		script(src="/socket.io/socket.io.js")
+	body
+		img(id="minimap" src="/images/minimap.jpg" class="map" draggable="false")
+		each hero in heroes
+			img(id=hero.id class="icon" src="http://cdn.dota2.com/apps/dota2/images/heroes/"+hero.name+"_icon.png" draggable="true")
+		script(src='/minimap.js')

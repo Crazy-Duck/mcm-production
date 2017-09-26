@@ -1,0 +1,39 @@
+html
+	head
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Concert+One')
+		link(rel='stylesheet', href='/standings.css')
+	body
+		section(id="footer")
+			button(id="click") Turn
+		section(id="container" class="stateOne")
+			div(id="box")
+				table(class="face front")
+					each row in standing.home
+						if row.disbanded == false
+							tr
+								td #{row.name}
+								td #{row.wins}
+				div(class="face back")
+					table(id="home")
+						tr
+							th(colspan=2) #{teams.home.name}
+						each player in teams.home.members
+							tr
+								if player.captain
+									td ♔ #{player.name}
+								else
+									td #{player.name}
+								td #{player.solo_mmr}
+					br
+					table(id="away")
+						tr
+							th(colspan=2) #{teams.away.name}
+						each player in teams.away.members
+							tr
+								if player.captain
+									td ♔ #{player.name}
+								else
+									td #{player.name}
+								td #{player.solo_mmr}
+
+		script(src='/standings.js')

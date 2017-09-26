@@ -1,0 +1,9 @@
+.icon {
+	cursor: move;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.map {
+	height: 300px;
+}

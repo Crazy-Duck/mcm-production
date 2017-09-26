@@ -1,0 +1,13 @@
+html
+    head
+    body
+        div(id="spam")
+            each s in spam
+                div
+                    input(type='text' value=s.message)
+                    input(type='text' value=s.interval)
+                    button(class='remove' data-message=s.message) 	🗑
+        div
+            button(id="add") add spam
+            button(id="clear") clear spam
+        script(src='/spam.js')

@@ -1,0 +1,15 @@
+html
+	head
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Concert+One')
+		link(rel='stylesheet', href='/networth.css')
+		script(src="/socket.io/socket.io.js")
+	body
+		div(class="container")
+			div(class="half")
+				div(id="dire")
+				div(id="radiant")
+			div(class="networth")
+				img(id="gold" src="/images/gold.png")
+				span(id="networth") 20000 
+		img(src="/images/clock.png" class="foreground")
+		script(src='/networth.js')

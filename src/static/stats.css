@@ -1,0 +1,26 @@
+body {
+	margin: 0;
+}
+
+table {
+	border-spacing: 0;
+    padding-top: 9px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+	background: rgba(0,0,0,0.55);
+    background: linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 12%, rgba(0,0,0,0.55) 85%, rgba(0,0,0,0) 100%)
+
+}
+
+td {
+	font-family: Calibri, sans-serif;
+	padding-right: 20px;
+	color: white;
+	text-shadow: 1px 1px black;
+	line-height: 16px;
+}
+
+.label {
+	color: rgb(144,160,184)
+}

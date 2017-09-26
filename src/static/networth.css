@@ -1,0 +1,41 @@
+.foreground {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+.container {
+	width: 100%;
+	float: left;
+}
+.half{
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	width: 204px;
+	height: 16px;
+	border: 1px solid gold;
+}
+#radiant {
+	background-color: #5faf37;
+	width: 120px;
+	height: 100%;
+}
+#dire {
+	background-color: #8f1e17;
+	border-left: 1px solid gold;
+	width: 84px;
+	height: 100%;
+	float: right;
+}
+.networth {
+	text-align: center;
+	font-family: Concert One;
+	color: #8f1e17;
+	margin-top: 16px;
+	text-shadow: 1px 1px black;
+}
+#gold {
+	vertical-align: text-bottom
+}

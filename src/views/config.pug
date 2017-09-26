@@ -1,0 +1,31 @@
+html
+    head
+        link(rel='stylesheet', href='/config.css')
+    body
+        div Home division: 
+            select(id="home_division")
+                each competition in competitions
+                    option(value=competition.id) #{competition.name}
+        div Away division: 
+            select(id="away_division")
+                each competition in competitions
+                    option(value=competition.id) #{competition.name}
+        button(id="divisions") Get teams
+        br
+        br
+        div Home:
+            select(id="home_team")
+        div Away:
+            select(id="away_team")
+        button(id="teams") Get players
+        br
+        br
+        div Home mid:
+            select(id="home_mid")
+        div Away mid:
+            select(id="away_mid")
+            
+        br
+        button(id="submit") Configure
+
+        script(src='/config.js')

@@ -1,0 +1,51 @@
+.hero {
+	height: 62px;
+	padding: 1px;
+	border-left: 5px solid;
+}
+.items {
+	height: 62px;
+	width: 130px;
+}
+.slot {
+	height: 30px;
+	padding: 1px;
+}
+.halfway td {
+	padding-top: 50px;
+}
+table {
+	border-collapse: collapse;
+	float: right;
+	transform: rotateY(15deg);
+}
+td {
+	color: white;
+	padding: 0; 
+	margin: 0;
+	font-family: 'Rationale', sans-serif;
+	font-size: 2em;
+	text-align: right;
+}
+th {
+	color: white;
+	text-align: right;
+	font-family: 'Rationale', sans-serif;
+	font-size: 3em;
+}
+.players {
+	margin-top: 50px;
+	width: 750px;
+	perspective: 500px;
+	perspective-origin: 50% 300px;
+}
+.blue {	border-left-color: #2e6ae6; }
+.teal { border-left-color: #5de6ad; }
+.purple { border-left-color: #ad00ad; }
+.yellow { border-left-color: #dcd90a; }
+.orange { border-left-color: #e66200; }
+.pink { border-left-color: #e67ab0; }
+.olive { border-left-color: #92a440; }
+.lightBlue { border-left-color: #5cc5e0; }
+.darkGreen { border-left-color: #00771f; }
+.brown { border-left-color: #956000; }

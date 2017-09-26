@@ -1,0 +1,17 @@
+body {
+    display: flex;
+}
+
+.score {
+    font-size: small;
+    color: white;
+    width: 70px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+	font-family: Calibri, sans-serif;
+}
+
+.pad {
+    width: 900px;
+}

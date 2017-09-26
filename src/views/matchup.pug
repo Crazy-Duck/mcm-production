@@ -1,0 +1,56 @@
+html
+	head
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Concert+One')
+		link(rel='stylesheet', href='/matchup.css')
+		script(src="/socket.io/socket.io.js")
+	body
+		table
+			tr
+				td(rowspan="6")
+					div(class="image")
+						img(id="left_hero" src="/images/invoker.jpg")
+						span(id="left_player" class="leftName") #{mids.home.name}
+				td(id="left_wr" class="left")
+				td WR
+				td(id="right_wr" class="right")
+				td(rowspan="6")
+					div(class="image")
+						img(id="right_hero" class="mirror" src="/images/invoker.jpg")
+						span(id="right_player" class="rightName") #{mids.away.name}
+			tr
+				td(id="left_k" class="left")
+				td Kills
+				td(id="right_k" class="right")
+			tr
+				td(id="left_d" class="left")
+				td Deaths
+				td(id="right_d" class="right")
+			tr
+				td(id="left_a" class="left")
+				td Assists
+				td(id="right_a" class="right")
+			tr
+				td(id="left_gpm" class="left")
+				td GPM
+				td(id="right_gpm" class="right")
+			tr
+				td(id="left_xpm" class="left")
+				td XPM
+				td(id="right_xpm" class="right")
+		
+		br
+		
+		p Hero: 
+			select(id="hero1")
+				each hero in heroes
+					option(id="1_"+hero.id value=hero.name) #{hero.localized_name}
+		p Hero: 
+			select(id="hero2")
+				each hero in heroes
+					option(id="2_"+hero.id value=hero.name) #{hero.localized_name}
+		button(id="fetch") Fetch
+		
+		script.
+			home_mid = "#{mids.home.id}";
+			away_mid = "#{mids.away.id}";
+		script(src='/matchup.js')

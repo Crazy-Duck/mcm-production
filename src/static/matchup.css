@@ -1,0 +1,45 @@
+body {
+	margin-left: 50px;
+}
+img {
+	width: 300px;
+}
+table {
+	transform: perspective(30em) rotateX(20deg);
+}
+td {
+	font-family: Concert One;
+	font-size: x-large;
+	color: white;
+	text-align: center;
+}
+span {
+	font-size: large;
+}
+.left {
+	text-align: left;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.right {
+	text-align: right;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.mirror {
+	transform: scale(-1, 1);
+}
+.leftName {
+	position: absolute;
+	right: 10;
+	top: 140px;
+}
+.rightName {
+	position: absolute;
+	left: 10;
+	top: 140px;
+}
+.image {
+	position: relative;
+	width: 100%;
+}

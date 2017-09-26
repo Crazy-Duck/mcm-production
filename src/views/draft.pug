@@ -1,0 +1,11 @@
+html
+	head
+		link(rel='stylesheet', href='/draft.css')
+	body
+		each team in teams
+			div
+				input(type='text' class='top' value=team[0].tname)
+				each player in team
+					input(type='text' value=player.pname)
+				- for (var x=0; x<7-team.length; x++)
+					input(type='text')

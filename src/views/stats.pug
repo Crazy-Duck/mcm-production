@@ -1,0 +1,13 @@
+html
+	head
+		link(rel='stylesheet', href='/stats.css')
+		script(src="/socket.io/socket.io.js")
+	body
+		table
+			tr
+				td(class="label") GPM
+				td(id="gpm")
+			tr
+				td(class="label") XPM
+				td(id="xpm")
+		script(src='/stats.js')

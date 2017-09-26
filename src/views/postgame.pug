@@ -1,0 +1,27 @@
+html
+    head
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Rationale')
+        link(rel='stylesheet', href='/postgame.css')
+        script(src="/socket.io/socket.io.js")
+    body
+        div(class="players")
+            table
+                thead
+                    tr
+                        th(colspan="3") #{radiant}
+                tbody
+                    - var colors = ["blue", "teal", "purple", "yellow", "orange", "pink", "olive", "lightBlue", "darkGreen","brown"]
+                    each player, i in players
+                        tr(class=i==5?"halfway":"")
+                            td #{player.name} &nbsp;
+                            td
+                                img(class="hero "+colors[i] src="http://cdn.steamstatic.com/apps/dota2/images/heroes/"+player.hero+"_lg.png")
+                            td(class="items")
+                                each item in player.items
+                                    if item
+                                        img(class="slot" src="http://cdn.steamstatic.com/apps/dota2/images/items/"+item+"_lg.png")
+                                    else
+                                        img(class="slot" src="/images/transparent.png")
+                tfoot
+                    tr
+                        th(colspan="3") #{dire}

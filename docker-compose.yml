@@ -1,0 +1,19 @@
+version: '3'
+services:
+  db:
+    image: mariadb
+    environment:
+      - "MYSQL_DATABASE=rd2l"
+      - "MYSQL_USER=rd2l"
+      - "MYSQL_PASSWORD=password"
+      - "MYSQL_ROOT_PASSWORD=root"
+    volumes:
+      - ./data:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+  server:
+    build: ./src
+    depends_on:
+      - db
+    ports:
+      - "3000:3000"
