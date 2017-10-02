@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `competition_teams` (
   CONSTRAINT `FK_ct_teams` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table rd2l.competition_teams: ~39 rows (approximately)
+-- Dumping data for table rd2l.competition_teams: ~2 rows (approximately)
 /*!40000 ALTER TABLE `competition_teams` DISABLE KEYS */;
 INSERT INTO `competition_teams` (`competition_id`, `team_id`, `disbanded`) VALUES
 	(1, 1, 0),
@@ -62,18 +62,18 @@ INSERT INTO `competition_teams` (`competition_id`, `team_id`, `disbanded`) VALUE
 	(2, 15, 0),
 	(2, 16, 1),
 	(2, 17, 0),
-	(2, 18, 0),
+	(2, 18, 1),
 	(2, 19, 0),
 	(2, 20, 0),
 	(2, 21, 0),
 	(2, 22, 0),
-	(2, 23, 0),
+	(2, 23, 1),
 	(2, 24, 0),
 	(2, 25, 0),
 	(2, 26, 0),
-	(2, 27, 0),
+	(2, 27, 1),
 	(2, 28, 0),
-	(2, 29, 0),
+	(2, 29, 1),
 	(2, 30, 0),
 	(2, 31, 0),
 	(2, 32, 0),
@@ -81,7 +81,7 @@ INSERT INTO `competition_teams` (`competition_id`, `team_id`, `disbanded`) VALUE
 	(3, 34, 0),
 	(3, 35, 0),
 	(3, 36, 1),
-	(3, 37, 0),
+	(3, 37, 1),
 	(3, 38, 0),
 	(3, 39, 0);
 /*!40000 ALTER TABLE `competition_teams` ENABLE KEYS */;
@@ -505,7 +505,7 @@ CREATE TABLE IF NOT EXISTS `matches` (
   CONSTRAINT `FK_m_competition` FOREIGN KEY (`competition_id`) REFERENCES `competitions` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table rd2l.matches: ~108 rows (approximately)
+-- Dumping data for table rd2l.matches: ~135 rows (approximately)
 /*!40000 ALTER TABLE `matches` DISABLE KEYS */;
 INSERT INTO `matches` (`start_time`, `competition_id`, `home_id`, `away_id`, `home_win`, `match_id`) VALUES
 	('2017-08-23 20:30:00', 2, 11, 16, 1, NULL),
@@ -615,7 +615,47 @@ INSERT INTO `matches` (`start_time`, `competition_id`, `home_id`, `away_id`, `ho
 	('2017-09-17 21:00:00', 3, 38, 35, 1, NULL),
 	('2017-09-17 21:00:00', 3, 39, 34, 0, 3450372407),
 	('2017-09-18 20:30:00', 2, 30, 17, 1, NULL),
-	('2017-09-18 22:00:00', 2, 30, 17, 1, NULL);
+	('2017-09-18 22:00:00', 2, 30, 17, 1, NULL),
+	('2017-09-20 20:30:00', 2, 11, 18, 0, NULL),
+	('2017-09-20 20:30:00', 2, 13, 28, 1, NULL),
+	('2017-09-20 20:30:00', 2, 14, 32, 1, NULL),
+	('2017-09-20 20:30:00', 2, 15, 25, 1, 3455738439),
+	('2017-09-20 20:30:00', 2, 19, 24, 0, NULL),
+	('2017-09-20 20:30:00', 2, 20, 29, 1, NULL),
+	('2017-09-20 20:30:00', 2, 26, 23, 1, NULL),
+	('2017-09-20 20:30:00', 2, 27, 21, 0, NULL),
+	('2017-09-20 20:30:00', 2, 31, 22, 0, 3455737329),
+	('2017-09-20 22:00:00', 2, 11, 18, 1, NULL),
+	('2017-09-20 22:00:00', 2, 13, 28, 0, NULL),
+	('2017-09-20 22:00:00', 2, 14, 32, 0, NULL),
+	('2017-09-20 22:00:00', 2, 15, 25, 0, 3455832727),
+	('2017-09-20 22:00:00', 2, 19, 24, 1, NULL),
+	('2017-09-20 22:00:00', 2, 20, 29, 1, NULL),
+	('2017-09-20 22:00:00', 2, 26, 23, 1, NULL),
+	('2017-09-20 22:00:00', 2, 27, 21, 0, NULL),
+	('2017-09-20 22:00:00', 2, 31, 22, 1, 3455835316),
+	('2017-09-23 20:30:00', 3, 37, 39, 0, 3461830877),
+	('2017-09-23 20:30:00', 3, 38, 33, 0, 3461858068),
+	('2017-09-23 21:30:00', 3, 38, 33, 0, 3461957346),
+	('2017-09-23 22:00:00', 3, 35, 34, 1, 3461999070),
+	('2017-09-23 22:00:00', 3, 37, 39, 0, 3461895034),
+	('2017-09-23 23:30:00', 3, 35, 34, 1, NULL),
+	('2017-09-27 20:30:00', 2, 11, 24, 0, 3469642795),
+	('2017-09-27 20:30:00', 2, 13, 19, 1, 3469682032),
+	('2017-09-27 20:30:00', 2, 14, 20, 0, NULL),
+	('2017-09-27 20:30:00', 2, 18, 28, 0, 3469651085),
+	('2017-09-27 20:30:00', 2, 22, 25, 0, 3469652210),
+	('2017-09-27 20:30:00', 2, 26, 21, 1, 3469676206),
+	('2017-09-27 20:30:00', 2, 30, 32, 0, 3469646864),
+	('2017-09-27 20:30:00', 2, 31, 15, 1, 3469645148),
+	('2017-09-27 22:00:00', 2, 11, 24, 0, 3469716885),
+	('2017-09-27 22:00:00', 2, 13, 19, 1, 3469750460),
+	('2017-09-27 22:00:00', 2, 14, 20, 1, NULL),
+	('2017-09-27 22:00:00', 2, 18, 28, 0, 3469715990),
+	('2017-09-27 22:00:00', 2, 22, 25, 0, 3469718368),
+	('2017-09-27 22:00:00', 2, 26, 21, 1, 3469724944),
+	('2017-09-27 22:00:00', 2, 30, 32, 0, 3469706009),
+	('2017-09-27 22:00:00', 2, 31, 15, 0, 3469738655);
 /*!40000 ALTER TABLE `matches` ENABLE KEYS */;
 
 -- Dumping structure for table rd2l.players
@@ -627,7 +667,7 @@ CREATE TABLE IF NOT EXISTS `players` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table rd2l.players: ~293 rows (approximately)
+-- Dumping data for table rd2l.players: ~0 rows (approximately)
 /*!40000 ALTER TABLE `players` DISABLE KEYS */;
 INSERT INTO `players` (`id`, `solo_mmr`, `party_mmr`, `name`) VALUES
 	(9787, 3511, 1356, 'Abderas'),
@@ -932,7 +972,7 @@ CREATE TABLE IF NOT EXISTS `teams` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=latin1;
 
--- Dumping data for table rd2l.teams: ~39 rows (approximately)
+-- Dumping data for table rd2l.teams: ~0 rows (approximately)
 /*!40000 ALTER TABLE `teams` DISABLE KEYS */;
 INSERT INTO `teams` (`id`, `name`) VALUES
 	(1, 'Team Denmark'),
@@ -964,7 +1004,7 @@ INSERT INTO `teams` (`id`, `name`) VALUES
 	(27, 'Armlet Toggling'),
 	(28, 'Cilamo\'s Fan Club'),
 	(29, 'Minorities in my waterpark'),
-	(30, 'Turtles on narcotics'),
+	(30, 'Tortoises on narcotics'),
 	(31, 'Dab on it wagwan x 100'),
 	(32, 'Beach Boys'),
 	(33, 'Disband?'),
@@ -988,7 +1028,7 @@ CREATE TABLE IF NOT EXISTS `team_players` (
   CONSTRAINT `FK_tp_teams` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table rd2l.team_players: ~257 rows (approximately)
+-- Dumping data for table rd2l.team_players: ~0 rows (approximately)
 /*!40000 ALTER TABLE `team_players` DISABLE KEYS */;
 INSERT INTO `team_players` (`team_id`, `player_id`, `captain`, `position`) VALUES
 	(1, 8686158, 0, NULL),
